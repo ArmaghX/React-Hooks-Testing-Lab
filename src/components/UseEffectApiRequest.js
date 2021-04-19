@@ -6,9 +6,9 @@ const UseEffectApiRequestComponent = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch('https://pablomagaz.com/api/posts')
+    fetch('https://api.github.com/users/armaghx930/repos')
       .then(response => response.json())
-      .then(data => setPosts(data.posts))
+      .then(repo => setPosts(repo))
       .finally(() => setIsLoading(false));
   }, []); //Solo se ejecuta una vez si el contenido del Array cambia
 
@@ -18,9 +18,9 @@ const UseEffectApiRequestComponent = () => {
    <fieldset>
       <div>
         { loading  }
-        { posts.map((post, key) => (
+        { posts.map((repo, key) => (
           <div key={ key }>
-            { post.title }
+            { repo.name }
           </div>
         ))}
         </div>

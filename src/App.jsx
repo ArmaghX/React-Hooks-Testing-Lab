@@ -1,6 +1,8 @@
 
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import { ThemeContext } from './context/ThemeContext';
 
 import UseStateComponent from './components/UseState';
 import UseEffectComponent from './components/UseEffect';
@@ -11,13 +13,17 @@ import UseMemoComponent from './components/UseMemo';
 import UseRefComponent from './components/UseRef';
 import UseEffectApiRequestComponent from './components/UseEffectApiRequest';
 
-class App extends Component {
-  render() {
+import ThemeBtn from './components/btn/ThemeBtn';
+
+
+function App() {
+  const theme = useContext(ThemeContext);
+  const darkMode = theme.state.darkMode;
     return (
       <Router>
-      <div>
-        <legend>REACT HOOKS EXAMPLES</legend>
-        <ul>
+      <div className={`bg ${darkMode ? "bg-dark" : "bg-light"}`} >
+        <legend className={`div ${darkMode ? "div-dark" : "div-light"}`}>REACT HOOKS EXAMPLES</legend>
+        <ul className={`div ${darkMode ? "div-dark" : "div-light"}`}>
           <li>
             <Link to="/UseState">UseState</Link>
           </li>
@@ -44,6 +50,8 @@ class App extends Component {
           </li>
         </ul>
 
+        <ThemeBtn />
+
         <hr />
 
         <Route exact path="/UseState" component={ UseStateComponent } />
@@ -59,6 +67,6 @@ class App extends Component {
      
     );
   }
-}
+
 
 export default App;

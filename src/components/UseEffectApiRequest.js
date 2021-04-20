@@ -8,7 +8,7 @@ const UseEffectApiRequestComponent = () => {
     setIsLoading(true);
     fetch('https://api.github.com/users/armaghx930/repos')
       .then(response => response.json())
-      .then(repo => setPosts(repo))
+      .then(repo => {setPosts(repo)})
       .finally(() => setIsLoading(false));
   }, []); //Solo se ejecuta una vez si el contenido del Array cambia
 

@@ -1,3 +1,5 @@
+/* General Styles */
+
 .App {
   text-align: center;
 }
@@ -26,3 +28,64 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.btn {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  margin-top: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s all linear;
+}
+
+.bg {
+  height: 100vh;
+  padding: 50px;
+  overflow: hidden;
+  transition: 0.2s all linear;
+}
+
+.div ul li Link {
+  text-decoration: none;
+}
+
+/* Light Mode Styles */
+
+.bg-light {
+  background-color: #fff;
+}
+
+.div-light {
+  color: #222;
+}
+
+.div-light li a {
+  color: #666;
+  text-decoration: none;
+}
+
+.btn-light {
+  background-color: #222;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Dark Mode Styles */
+
+.bg-dark {
+  background-color: #222;
+  color: white
+}
+
+.div-dark li a {
+  color: #888;
+  text-decoration: none;
+}
+
+.btn-dark {
+  background-color: #fff;
+  color: #222;
+}
+

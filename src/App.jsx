@@ -22,8 +22,8 @@ function App() {
     return (
       <Router>
       <div className={`bg ${darkMode ? "bg-dark" : "bg-light"}`} >
-        <legend className={`div ${darkMode ? "div-dark" : "div-light"}`}>REACT HOOKS EXAMPLES</legend>
-        <ul className={`div ${darkMode ? "div-dark" : "div-light"}`}>
+        <legend className={`${darkMode ? "div-dark" : "div-light"}`}>REACT HOOKS EXAMPLES</legend>
+        <ul className={`${darkMode ? "div-dark" : "div-light"}`}>
           <li>
             <Link to="/UseState">UseState</Link>
           </li>

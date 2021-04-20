@@ -46,9 +46,6 @@
   transition: 0.2s all linear;
 }
 
-.div ul li Link {
-  text-decoration: none;
-}
 
 /* Light Mode Styles */
 
@@ -71,6 +68,7 @@
   font-size: 15px;
   cursor: pointer;
 }
+
 
 /* Dark Mode Styles */
 
